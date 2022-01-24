@@ -51,7 +51,7 @@ jobs:
         #   path: bin
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          repo_token: "${{ secrets.UPLOAD_KEY }}"
+          repo_token: v4.44.0
           prerelease: false
           files: |
             bin/*.tar.gz
