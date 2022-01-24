@@ -1,9 +1,17 @@
-name: build
+name: Build V2ray
 
-on:
+on: 
+  release:
+    types: [published]
   push:
     tags:
-      - v*
+    - 'v*'
+  #  branches: 
+  #    - master
+#  schedule:
+#    - cron: 0 8 * * 5
+  watch:
+    types: [started]
 
 jobs:
   build:
