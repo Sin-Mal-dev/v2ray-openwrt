@@ -45,12 +45,7 @@ jobs:
           chmod +x ./build.sh
           ./build.sh linux mipsle
       - name: Upload artifact
-        # uses: actions/upload-artifact@v2
-        # with:
-        #   name: build
-        #   path: bin
-        uses: "marvinpinto/action-automatic-releases@latest"
+        uses: actions/upload-artifact@master
         with:
-          name: V2ray-packages
-          files: |
-            bin/*.tar.gz
+          name: v2ray-packages
+          path: /bin
